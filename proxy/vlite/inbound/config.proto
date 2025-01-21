@@ -1,0 +1,12 @@
+syntax = "proto3";
+package xray.core.proxy.vlite.inbound;
+option csharp_namespace = "XRay.Core.Proxy.Vlite.Inbound";
+option go_package = "github.com/URayX/Uray-core/proxy/vlite/inbound";
+option java_package = "com.xray.core.proxy.vlite.inbound";
+option java_multiple_files = true;
+message UDPProtocolConfig {
+  string password = 3;
+  bool scramble_packet = 4;
+  bool enable_fec = 5;
+  bool enable_stabilization = 6;
+}
