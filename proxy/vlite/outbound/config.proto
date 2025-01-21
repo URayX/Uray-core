@@ -1,0 +1,15 @@
+syntax = "proto3";
+package xray.core.proxy.vlite.outbound;
+option csharp_namespace = "XRay.Core.Proxy.Vlite.Outbound";
+option go_package = "github.com/URayX/Uray-core/proxy/vlite/outbound";
+option java_package = "com.v2ray.core.proxy.vlite.outbound";
+option java_multiple_files = true;
+import "common/net/address.proto";
+message UDPProtocolConfig {
+  xray.core.common.net.IPOrDomain address = 1;
+  uint32 port = 2;
+  string password = 3;
+  bool scramble_packet = 4;
+  bool enable_fec = 5;
+  bool enable_stabilization = 6;
+}
